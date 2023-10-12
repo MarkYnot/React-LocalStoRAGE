@@ -2,14 +2,14 @@
 import './App.css';
 import './css/App.css';
 import Header from './components/NoteComponents/Header'
-import Note from './components/NoteComponents/Note'
+import Notes from './components/NoteComponents/Notes'
 
 
 export default function App() {
   return (
     <div className="main">
       <Header />
-      <Note />
+      <Notes />
   </div>
   );
 }

@@ -1,19 +1,22 @@
-const CreateNote=()=>{
+import LinearProgress from '@mui/material/LinearProgress'
+
+const CreateNote=({saveHandler,inputText,textHandler})=>{
   const charLimit = 100
-  const charLeft = 100;
+  const charLeft = charLimit-inputText.length;
+
   return (
   <div className='note'>
   <textarea
   cols='10'
   rows='5'
-  value=""
+  value={inputText}
   placeholder='Typе...'
-  onChange=''
+  onChange={textHandler}
   maxLength={charLimit}
   ></textarea>
   
   <div className='note__footer'>
-  <span className='label'>{charLeft} left</span> <button className='note__save'>save</button> 
+  <span className='label'>{charLeft} left</span> <button className='note__save' onClick={saveHandler}>save</button> 
   </div>
 
   <LinearProgress 

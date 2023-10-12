@@ -1,11 +1,16 @@
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+
+
 const Note =({note,deleteNote})=>{
   return <div className="note">
-      <h1 className="note__body">hello world</h1>
-       <div className="note__footer"></div>
-      <DeleteForeverIcon className='note__delete' aria-jidden='true' 
-      // onClick={()=>deleteNote(note.id)}
-      />
+      <div className="note__body">{note.text}</div>
+       <div className="note__footer" style={{justifyContent:'flex-end'}}>
+      <DeleteForeverIcon className='note__delete' aria-hidden='true' 
+      onClick={()=>deleteNote(note.id)}
+      >
+        
+      </DeleteForeverIcon>
+      </div>
   </div>
 }
 
